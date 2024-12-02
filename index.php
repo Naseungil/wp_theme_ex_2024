@@ -6,7 +6,10 @@
 <?php
 if ( have_posts() ) :
   while ( have_posts() ) : the_post();
-      the_content();
+    echo '<h2>';
+      the_title();
+    echo '</h2>';
+    the_content();
   endwhile;
 else :
   _e( '내용이 없습니다.', 'seungil_portfolio' );
