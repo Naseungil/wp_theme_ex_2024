@@ -1,6 +1,6 @@
 <?php get_header()?>
 
-
+<?php wp_login_form() ?>
 <div id="content" class="two-thirds">
   
 <div class="widget-container">	

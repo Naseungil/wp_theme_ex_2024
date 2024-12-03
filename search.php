@@ -8,7 +8,7 @@
         // The Loop
         while ( have_posts() ) : the_post();
       ?>
-        <li style="list-style:none;">
+        <li>
           <a href="<?php the_permalink(); ?>">
             <?php
               if ( has_post_thumbnail() ) {
