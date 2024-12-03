@@ -1,11 +1,13 @@
-<!-- the sidebar - in WordPress this will be populated with widgets -->
-<aside class="sidebar widget-area one-third right" role="complementary">
+<?php get_header()?>
 
-  <div class="widget-container">	
+
+<div id="content" class="two-thirds">
+  
+<div class="widget-container">	
     <h3 class="widget-title">최근 공지</h3>
     <?php
       query_posts( array(
-        'category_name'  => 'notice',
+        'category_name'  => 'works',
         'posts_per_page' => 3
       ) );
     ?>
@@ -21,7 +23,6 @@
                 the_post_thumbnail( array( 50, 50));
               }
             ?>
-            <?= the_title() ?>
           </a>
         </li>
       <?php
@@ -31,9 +32,11 @@
     <?php  wp_reset_query(); ?>
   </div><!-- .widget-container -->
 
-  <div class="widget-container">	
-    <h3 class="widget-title"3>Another sidebar widget</h3>
-    <p>A second sidebar widget - maybe you could use a plugin to display a social media feed, or simply list your most recent posts.</p>
-  </div><!-- .widget-container -->
 
-</aside>
+
+    
+</div><!-- #content-->
+    
+<?php get_sidebar(); ?>
+
+<?php get_footer()?>
